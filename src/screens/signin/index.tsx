@@ -3,7 +3,7 @@ import React from 'react'
 import RoundButton from '../../components/RoundButton'
 import FullRoundButton from '../../components/fullRoundButton'
 
-const SignIn = () => {
+const SignIn = ({navigation}:any) => {
   return (
     <View style={{flex:1}}>
       <View style={{flex:0.5}}>
@@ -23,8 +23,8 @@ const SignIn = () => {
         <Text style={styles.headi}>Re-Image</Text>
         <Text style={styles.para}>Buy yourself a new Image </Text>
         <View style={styles.buttonDiv}>
-          <RoundButton labela='SignUp' color='white' fontColor='#2a8fbc'/>
-          <RoundButton labela='Login' color='#2a8fbc'fontColor='white'/>
+          <RoundButton labela='SignUp' color='white' fontColor='#2a8fbc' handlePress={()=>{navigation.navigate('SignUp')}}/>
+          <RoundButton labela='Login' color='#2a8fbc'fontColor='white' />
         </View>
         <Text style={styles.social}>Or connect via Social Media </Text>
         <View style={styles.socialButton}>
